@@ -62,11 +62,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"📦 Количество работ: {job_count}"
     )
 
-ApplicationBuilder().token("YOUR_NEW_BOT_TOKEN").build()
-
-
 def main():
-    app = ApplicationBuilder().token("8571069166:AAHkZGFuWnBQ5xSsReu04PrMUVDiifOtoLg").build()
+    app = ApplicationBuilder().token(os.getenv("BOT_TOKEN")).build()
 
     app.add_handler(CommandHandler("reset", reset))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
@@ -76,4 +73,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
