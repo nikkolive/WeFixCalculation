@@ -1,3 +1,4 @@
+import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, ContextTypes, filters
 import re
@@ -73,5 +74,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
